@@ -197,7 +197,7 @@ st.container()
 
 st.markdown ('### I. Problema de Negócio:')
 
-st.markdown (" A empresa Fome Zero é uma marktplace de restaurantes. Ou seja, seu core business é facilitar o encontro e negociações de clientes e restaurantes. Os restaurantes fazem o cadastros dentro da plataforma da Fome Zero, que disponibiliza informações como endereço, tipo de culinária servida, se possui reservas, se faz entregas e também uma nota de avalição  dos serviços e produtos do restaurante, dentre outras informações. O conjunto de dados que representa o contexto está disponível na plataforma do Kaggle e disponível para download em Dados na barra lateral.  " )
+st.markdown (" A empresa Fome Zero é uma marktplace de restaurantes. Ou seja, seu core business é facilitar o encontro e negociações de clientes e restaurantes. Os restaurantes fazem o cadastros dentro da plataforma da Fome Zero, que disponibiliza informações como endereço, tipo de culinária servida, se possui reservas, se faz entregas e também uma nota de avalição  dos serviços e produtos do restaurante, dentre outras informações. O conjunto de dados que representa o contexto está disponível na plataforma do Kaggle e disponível para download em 'Dados Tratados' na barra lateral.  " )
 
 st.markdown ('### II. Objetivo:')
 st.markdown (""" 
