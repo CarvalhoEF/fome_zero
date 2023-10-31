@@ -9,7 +9,7 @@ import inflection
 import emoji
 import matplotlib.pyplot as plt  
 
-st.set_page_config (page_title = 'Czinhas', page_icon=' 👨‍🍳 ', layout='wide')
+st.set_page_config (page_title = 'Culinárias', page_icon=' 👨‍🍳 ', layout='wide')
 #=============================================================================
 #Import o Dataset:
 #=============================================================================
@@ -259,11 +259,11 @@ st.sidebar.markdown( '#### Powered by Elen Carvalho' )
 #Layout no Stremlit
 #===================================================================================
 
-#VISÃO - Cidades
+#VISÃO - Culinárias
 
-st.header('🥘Visão Tipos de Cozinhas/Restaurantes')
+st.header('🥘Visão Tipos de Culinárias/Restaurantes')
 
-tab1, tab2 = st.tabs( ['Cozinhas', 'Restaurantes'])
+tab1, tab2 = st.tabs( ['Culinárias', 'Restaurantes'])
 
 with tab1:
     st.markdown ('## Melhores Restaurantes dos Principais tipos Culinários')
