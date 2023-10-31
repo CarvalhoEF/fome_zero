@@ -12,6 +12,7 @@ import folium as folium
 from folium.plugins import MarkerCluster
 from streamlit_folium import folium_static
 import locale
+import inflection
 st.set_page_config (page_title = 'Home page', page_icon='⚙️', layout='wide')
 
 
