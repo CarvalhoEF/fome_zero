@@ -9,7 +9,7 @@ import inflection
 import emoji
 import matplotlib.pyplot as plt  
 
-st.set_page_config (page_title = 'Cozinhas', page_icon=' 👨‍🍳 ', layout='wide')
+st.set_page_config (page_title = 'Czinhas', page_icon=' 👨‍🍳 ', layout='wide')
 #=============================================================================
 #Import o Dataset:
 #=============================================================================
