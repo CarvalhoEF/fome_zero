@@ -9,3 +9,4 @@ plotly==5.17.0
 streamlit==1.27.2
 streamlit-folium==0.15.0
 emoji==2.8.0
+inflection==0.5.1
