@@ -6,7 +6,6 @@ import streamlit as st
 from haversine import haversine
 import plotly.graph_objects as go
 import numpy as np
-import inflection
 import emoji
 import matplotlib.pyplot as plt  
 import folium as folium
