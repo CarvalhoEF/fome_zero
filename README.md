@@ -123,7 +123,7 @@ Identificamos através dos gráficos as culinárias e restaurantes mais avaliada
 ### 4. Top 4 Insights de dados
 
 - A maior concentração de Restaurantes está no continente asiático, os Estados Unidos assumi o segundo lugar com mais restaurantes registrados na plataforma.
-- Importante observar a quantidade mínima de restaurantes que trabalham com Delivery.
+- Importante observar a quantidade mínima de restaurantes por país que trabalham com Delivery.
 - Não há diferença na média de valores dos pratos para duas pessoas em restaurantes que aceitem ou não reservas.
 - Os restaurantes com pedidos online recebem mais acessos de avaliações na plataforma.
 
