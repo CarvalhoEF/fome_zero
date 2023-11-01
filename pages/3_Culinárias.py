@@ -234,7 +234,7 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 st.sidebar.markdown( """---""" )
 
 default2_options = ['Japanese', 'Brazilian', 'Arabian', 'American', 'Italian', 'Others', 'Tex-Mex', 'Vegetarian', 'Durban', 'Beverages', 'Coffee', 'Pizza', 'Chinese', 'European']
-cuisine_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:', df1['cuisines'].unique(), default=default2_options)
+cozinha_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:', df1['cuisines'].unique(), default=default2_options)
 
 
 st.sidebar.markdown( """---""" )
@@ -248,7 +248,7 @@ linhas_selecionadas = df1['country_code'].isin (country_options)
 df1 = df1.loc[linhas_selecionadas, :]  
 
 #Filtro de seleção de culinárias
-linhas_selecionadas = df1['cuisines'].isin(cuisines_options)
+linhas_selecionadas = df1['cuisines'].isin(cozinha_options)
 df1 = df1.loc[linhas_selecionadas, :] 
 #===================================================================================
 #Layout no Stremlit
