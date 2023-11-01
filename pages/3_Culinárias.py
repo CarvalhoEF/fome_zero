@@ -237,11 +237,14 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 
 st.sidebar.markdown( """---""" )
 
-cuisines_options = st.sidebar.multiselect('Escolha os Tipos de Culinária:', df1['cuisines'].unique(), default=['Brazilian','Mineira','Japonesa','Pizza'])
+default2_options = ['Italian', 'European', 'Filipino', 'American', 'Korean', 'Pizza','Taiwanese', 'Japanese', 'Coffee', 'Chinese', 'Seafood','Singaporean', 'Vietnamese', 'Latin American', 'Healthy Food',
+                    'Cafe', 'Fast Food', 'Brazilian', 'Argentine', 'Arabian', 'Bakery', 'Tex-Mex', 'Bar Food', 'International', 'French', 'Steak', 'German', 'Sushi', 'Grill', 'Peruvian', 'North Eastern']
+cuisines_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:',
+                                           df1['cuisines'].unique(), default=default2_options)
 
 #Filtro de seleção de culinárias
 
-linhas_selecionadas = df1['cuisines'].isin (cuisines_options)
+linhas_selecionadas = df1['cuisines'].isin(cuisines_options)
 df1 = df1.loc[linhas_selecionadas, :] 
 
 
