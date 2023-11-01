@@ -233,9 +233,8 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 
 st.sidebar.markdown( """---""" )
 
-default2_options = ['Home-made', 'BBQ', 'Japanese', 'Brazilian', 'Arabian', 'American', 'Italian', 'Others', 'Tex-Mex', 'Vegetarian', 'Durban', 'Beverages', 'Coffee', 'Pizza', 'Chinese', 'European', 'Seafood', 'Fresh Fish', 'Fish and Chips', 'Street Food' ]
-cuisine_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:',
-                                           df1['cuisines'].unique(), default=default2_options)
+default2_options = ['Japanese', 'Brazilian', 'Arabian', 'American', 'Italian', 'Others', 'Tex-Mex', 'Vegetarian', 'Durban', 'Beverages', 'Coffee', 'Pizza', 'Chinese', 'European']
+cuisine_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:', df1['cuisines'].unique(), default=default2_options)
 
 
 st.sidebar.markdown( """---""" )
