@@ -225,10 +225,6 @@ default_options = ['Brazil', 'Qatar', 'Canada', 'Australia', 'India']
 country_options = st.sidebar.multiselect ('Escolha os países que deseja visualizar as informações:',
                                            df1['country_code'].unique(), default=default_options)
 
-#Filtro de seleção de países
-linhas_selecionadas = df1['country_code'].isin (country_options)
-df1 = df1.loc[linhas_selecionadas, :]  
-
 st.sidebar.markdown( """---""" )
 
 
@@ -237,22 +233,24 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 
 st.sidebar.markdown( """---""" )
 
-default2_options = ['Italian', 'European', 'Filipino', 'American', 'Korean', 'Pizza','Taiwanese', 'Japanese', 'Coffee', 'Chinese', 'Seafood','Singaporean', 'Vietnamese', 'Latin American', 'Healthy Food',
-                    'Cafe', 'Fast Food', 'Brazilian', 'Argentine', 'Arabian', 'Bakery', 'Tex-Mex', 'Bar Food', 'International', 'French', 'Steak', 'German', 'Sushi', 'Grill', 'Peruvian', 'North Eastern']
-cuisines_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:',
+default2_options = ['Home-made', 'BBQ', 'Japanese', 'Brazilian', 'Arabian', 'American', 'Italian', 'Others', 'Tex-Mex', 'Vegetarian', 'Durban', 'Beverages', 'Coffee', 'Pizza', 'Chinese', 'European', 'Seafood', 'Fresh Fish', 'Fish and Chips', 'Street Food' ]
+cuisine_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:',
                                            df1['cuisines'].unique(), default=default2_options)
-
-#Filtro de seleção de culinárias
-
-linhas_selecionadas = df1['cuisines'].isin(cuisines_options)
-df1 = df1.loc[linhas_selecionadas, :] 
 
 
 st.sidebar.markdown( """---""" )
-                               
+
+
 st.sidebar.markdown( '#### Powered by Elen Carvalho' )
 
 
+#Filtro de seleção de países
+linhas_selecionadas = df1['country_code'].isin (country_options)
+df1 = df1.loc[linhas_selecionadas, :]  
+
+#Filtro de seleção de culinárias
+linhas_selecionadas = df1['cuisines'].isin(cuisines_options)
+df1 = df1.loc[linhas_selecionadas, :] 
 #===================================================================================
 #Layout no Stremlit
 #===================================================================================
