@@ -237,20 +237,7 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 
 st.sidebar.markdown( """---""" )
 
-default2_options = ['Italian', 'European', 'Filipino', 'American', 'Korean', 'Pizza','Taiwanese', 'Japanese', 'Coffee', 'Chinese', 'Seafood','Singaporean', 'Vietnamese', 'Latin American', 'Healthy Food',
-                    'Cafe', 'Fast Food', 'Brazilian', 'Argentine', 'Arabian', 'Bakery', 'Tex-Mex', 'Bar Food', 'International', 'French', 'Steak', 'German', 'Sushi', 'Grill', 'Peruvian', 'North Eastern',
-                    'Ice Cream', 'Burger', 'Mexican', 'Vegetarian', 'Contemporary', 'Desserts', 'Juices', 'Beverages', 'Spanish', 'Thai', 'Indian','Mineira', 'BBQ', 'Mongolian', 'Portuguese', 'Greek', 
-                    'Asian', 'Author', 'Gourmet Fast Food', 'Lebanese', 'Modern Australian','African', 'Coffee and Tea', 'Australian', 'Middle Eastern','Malaysian', 'Tapas', 'New American', 'Pub Food',
-                    'Southern','Diner', 'Donuts', 'Southwestern', 'Sandwich', 'Irish', 'Mediterranean', 'Cafe Food', 'Korean BBQ', 'Fusion', 'Canadian','Breakfast', 'Cajun', 'New Mexican', 'Belgian',
-                    'Cuban', 'Taco', 'Caribbean', 'Polish', 'Deli', 'British', 'California', 'Others', 'Eastern European', 'Creole', 'Ramen', 'Ukrainian', 'Hawaiian','Patisserie', 'Yum Cha', 
-                    'Pacific Northwest', 'Tea', 'Moroccan','Burmese', 'Dim Sum', 'Crepes', 'Fish and Chips', 'Russian','Continental', 'South Indian', 'North Indian', 'Salad','Finger Food', 'Mandi', 
-                    'Turkish', 'Kerala', 'Pakistani','Biryani', 'Street Food', 'Nepalese', 'Goan', 'Iranian', 'Mughlai','Rajasthani', 'Mithai', 'Maharashtrian', 'Gujarati', 'Rolls','Momos', 'Parsi',
-                     'Modern Indian', 'Andhra', 'Tibetan', 'Kebab','Chettinad', 'Bengali', 'Assamese', 'Naga', 'Hyderabadi', 'Awadhi','Afghan', 'Lucknowi', 'Charcoal Chicken', 'Mangalorean',
-                    'Egyptian', 'Malwani', 'Armenian', 'Roast Chicken', 'Indonesian','Western', 'Dimsum', 'Sunda', 'Kiwi', 'Asian Fusion', 'Pan Asian','Balti', 'Scottish', 'Cantonese', 'Sri Lankan', 'Khaleeji',
-                    'South African', 'Drinks Only', 'Durban', 'World Cuisine','Izgara', 'Home-made', 'Giblets', 'Fresh Fish', 'Restaurant Cafe','Kumpir', 'Döner', 'Turkish Pizza', 'Ottoman', 'Old Turkish Bars','Kokoreç']
-cuisines_options = st.sidebar.multiselect ('Escolha os Tipos de Culinária:',
-                                           df1['cuisines'].unique(), default=default2_options)
-
+cuisines_options = st.sidebar.multiselect('Escolha os Tipos de Culinária:', df1['cuisines'].unique(), default=[])
 
 #Filtro de seleção de culinárias
 
