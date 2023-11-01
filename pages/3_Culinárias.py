@@ -174,7 +174,7 @@ def restaurants_rating(df1):
     return (fig)
 
 def restaurantes_delivery(df1):
-    # Filtrar os restaurantes que aceitam pedidos online 
+    # Filtrar os restaurantes que trabalham com Delivery 
     filtro = df1['has_online_delivery'] == 1
         
     # Listar os restaurantes que aceitam pedidos online
@@ -186,7 +186,7 @@ def restaurantes_delivery(df1):
                                .reset_index())
             
     # Plotar o gráfico de barras dos melhores restaurantes com pedidos online
-    fig = (px.bar(restaurantes_delivery, x='restaurant_name', y='aggregate_rating', title=f'Os TOP {qtde_rest} restaurantes que aceitam pedidos online',
+    fig = (px.bar(restaurantes_delivery, x='restaurant_name', y='aggregate_rating', title=f'Os TOP {qtde_rest} restaurantes que trabalham com Delivery',
                   labels={'restaurant_name': 'Nome do Restaurante', 'aggregate_rating': 'Nota Média', }))
    
     return (fig)
@@ -221,7 +221,7 @@ df1 = clean_code(df1)
 #=============================================================================
 st.sidebar.markdown ('# Filtros')
 
-default_options = ['Brazil', 'England', 'Canada', 'Australia', 'Indonesia']
+default_options = ['Brazil', 'Qatar', 'Canada', 'Australia', 'India']
 country_options = st.sidebar.multiselect ('Escolha os países que deseja visualizar as informações:',
                                            df1['country_code'].unique(), default=default_options)
 
