@@ -173,24 +173,22 @@ def restaurants_rating(df1):
     
     return (fig)
 
-def restaurantes_booking(df1):
-    # Filtrar os restaurantes que aceitam pedidos online 
+def restaurantes_delivery(df1):
+    # Filtrar os restaurantes que aceitam pedidos online e mostrar a nota média
     filtro = df1['has_online_delivery'] == 1
         
     # Listar os restaurantes que aceitam pedidos online
-    restaurantes_booking = (df1.loc[filtro,['restaurant_name', 'votes']]
+    restaurantes_delivery = (df1.loc[filtro,['restaurant_name', 'aggregate_rating']]
                                .groupby('restaurant_name')
-                               .count()
-                               .sort_values(by='votes', ascending=False)
+                               .mean()
+                               .sort_values(by='aggregate_rating', ascending=False)
                                .head(qtde_rest)
                                .reset_index())
             
-    # Plotar o gráfico de barras dos melhores restaurantes com pedidos online
-    fig = (px.bar(restaurantes_booking, x='restaurant_name', y='votes', title=f'Os TOP {qtde_rest} restaurantes que aceitam pedidos online',
-                   text='votes',  labels={'restaurant_name': 'Nome do Restaurante', 'votes': 'Quantidade de Votos', }))
-    #Configurar a aparência do gráfico (opcional)
-    fig.update_traces(texttemplate='%{text}', textposition='outside')  # Mostrar contagem de votos em cima das barras
-    fig.update_layout(xaxis_title='Restaurantes', yaxis_title='Quantidade de Votos')
+    # Plotar o gráfico de barras dos restaurantes que faz pedidos online e as notas médias de cada
+    fig = (px.bar(restaurantes_delivery, x='restaurant_name', y='aggregate_rating', title=f'Os TOP {qtde_rest} restaurantes que aceitam pedidos online',
+                   text='votes',  labels={'restaurant_name': 'Nome do Restaurante', 'aggregate_rating': 'Nota Média', }))
+  
     return (fig)
 
 
@@ -357,20 +355,20 @@ with tab2:
 
     with st.container():
         
-        #Restaurantes mais avaliados.
+        #Os (quantidade definida pelo filtro) Restaurantes mais avaliados.
         fig = restaurants_rating(df1)
         st.plotly_chart(fig, use_container_width=True,theme='streamlit')
     
 
     with st.container():
         
-        #restaurantes que fazem reservas.
-        fig = restaurantes_booking(df1)
+        #Os (quantidade definida pelo filtro) restaurantes que aceitam pedidos on-line.
+        fig = restaurantes_delivery(df1)
         st.plotly_chart(fig, use_container_width=True,theme='streamlit')
 
     
     with st.container():
-        #Restaurantes que fazm entrega X Quatidade média de avaliações
+        #Restaurantes (quantidade definida pelo filtro) que fazm entrega X Quatidade média de avaliações
         fig = data(df1)
         st.plotly_chart(fig, use_container_width=True,theme='streamlit')
 
