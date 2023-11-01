@@ -238,7 +238,7 @@ qtde_rest = st.sidebar.slider('Selecione a quantidade de restaurantes que deseja
 st.sidebar.markdown( """---""" )
 
 default2_options = ['Italian', 'European', 'Filipino', 'American', 'Korean', 'Pizza','Taiwanese', 'Japanese', 'Coffee', 'Chinese', 'Seafood','Singaporean', 'Vietnamese', 'Latin American', 'Healthy Food',
-                    'Cafe', 'Fast Food', 'Brazilian', 'Argentine', 'Arabian', 'Bakery', Tex-Mex', 'Bar Food', 'International', 'French', 'Steak', 'German', 'Sushi', 'Grill', 'Peruvian', 'North Eastern',
+                    'Cafe', 'Fast Food', 'Brazilian', 'Argentine', 'Arabian', 'Bakery', 'Tex-Mex', 'Bar Food', 'International', 'French', 'Steak', 'German', 'Sushi', 'Grill', 'Peruvian', 'North Eastern',
                     'Ice Cream', 'Burger', 'Mexican', 'Vegetarian', 'Contemporary', 'Desserts', 'Juices', 'Beverages', 'Spanish', 'Thai', 'Indian','Mineira', 'BBQ', 'Mongolian', 'Portuguese', 'Greek', 
                     'Asian', 'Author', 'Gourmet Fast Food', 'Lebanese', 'Modern Australian','African', 'Coffee and Tea', 'Australian', 'Middle Eastern','Malaysian', 'Tapas', 'New American', 'Pub Food',
                     'Southern','Diner', 'Donuts', 'Southwestern', 'Sandwich', 'Irish', 'Mediterranean', 'Cafe Food', 'Korean BBQ', 'Fusion', 'Canadian','Breakfast', 'Cajun', 'New Mexican', 'Belgian',
